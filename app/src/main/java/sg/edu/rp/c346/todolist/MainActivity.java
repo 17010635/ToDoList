@@ -7,7 +7,7 @@ import android.widget.ListView;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    ListView lvEmployee;
+    ListView lvToDo;
     ArrayList<ToDo> alToDo;
     CustomAdapter caToDo;
 
@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        lvEmployee = findViewById(R.id.listViewToDo);
+        lvToDo = findViewById(R.id.listViewToDo);
 
         alToDo = new ArrayList<>();
         ToDo item1 = new ToDo("MSA","1/7/2018");
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
         caToDo = new CustomAdapter(this,R.layout.todo,alToDo);
 
-        lvEmployee.setAdapter(caToDo);
+        lvToDo.setAdapter(caToDo);
 
     }
 }
